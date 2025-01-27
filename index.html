@@ -69,10 +69,19 @@
   </div>
 
   <!-- Hidden Form for FormSubmit -->
-  <form id="valentine-form" action="https://formsubmit.co/randalls66@gmail.com" method="POST" style="display: none;">
+  <form id="valentine-form" action="https://api.web3forms.com/submit" method="POST" style="display: none;">
+    <!-- Required Fields -->
+    <input type="hidden" name="access_key" value="4930e2de-f8b0-460d-864f-ed29e6e3dd48">
+    <input type="hidden" name="subject" value="Valentine's Form Submission">
+    <input type="hidden" name="from_name" value="Randall S.">
+    <input type="hidden" name="redirect" value="https://randayee.github.io/valentine-form/thank-you.html">
+  
+    <!-- User Inputs -->
     <input type="hidden" name="Meal Preference" id="meal-preference">
     <input type="hidden" name="Gift Preferences" id="gift-preferences">
     <input type="hidden" name="General Comments" id="general-comments-field">
+  
+    <!-- Submit Button (Hidden) -->
     <button type="submit"></button>
   </form>
 

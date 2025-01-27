@@ -11,7 +11,7 @@ const mealOtherInput = document.getElementById("meal-other-input");
 const giftOtherInput = document.getElementById("gift-other-input");
 const submitBtn = document.getElementById("submit-btn");
 
-// FormSubmit hidden form references
+// Web3Forms hidden form references
 const form = document.getElementById("valentine-form");
 const mealField = document.getElementById("meal-preference");
 const giftsField = document.getElementById("gift-preferences");
@@ -76,17 +76,23 @@ submitBtn.addEventListener("click", (e) => {
 
   // Determine final meal and gift preferences
   const finalMeal = meal === "Other" ? mealOtherValue : meal;
-  const finalGifts = gifts.includes("Other") ? [...gifts.filter(g => g !== "Other"), giftOtherValue] : gifts;
+  const finalGifts = gifts.includes("Other") ? [...gifts.filter((g) => g !== "Other"), giftOtherValue] : gifts;
 
   // Populate hidden form fields
   mealField.value = finalMeal;
   giftsField.value = finalGifts.join(", ");
   commentsField.value = generalComments;
 
+  console.log("Submitting Response:", {
+    mealPreference: finalMeal,
+    giftPreferences: finalGifts,
+    generalComments: generalComments,
+  });
+
   // Submit the hidden form
   form.submit();
 
-  // Hide questions and show thank-you message
+  // Hide the questions section and show the thank-you message
   questionsContent.style.display = "none";
   thankYouContent.style.display = "block";
 });
