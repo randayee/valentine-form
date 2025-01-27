@@ -76,7 +76,7 @@ submitBtn.addEventListener("click", async () => {
   console.log("Submitting Response:", response);
 
   // Google Apps Script Web App URL
-  const googleScriptURL = "https://script.google.com/macros/s/AKfycbyc6ZFHOFaubdwTKjFqsPF_3Y1IS_loeeJnx3mv-42K-F0qtkBp8YdDiS1pFKuLyvKNjA/exec"; // Replace with your Web App URL
+  const googleScriptURL = "https://script.google.com/macros/s/AKfycbwPPb9ky_PMDgUAd0_iTI8R5KJNnWs_RZw0rVZfkvF8cqBIp9gmMiQHKvUDNS7_QfLDtg/exec"; // Replace with your Web App URL
 
   try {
     // Send data to Google Sheets
