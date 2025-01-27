@@ -4,9 +4,9 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-  }
-  
-  #bg-video {
+}
+
+#bg-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,12 +15,12 @@ body {
     object-fit: cover;
     z-index: -1;
     filter: brightness(0.7);
-  }
-  
-  /* Transparent Container Styling */
-  .container, .questions-container, .rejection-container, .thank-you-container {
+}
+
+/* Transparent Container Styling */
+.container, .questions-container, .rejection-container, .thank-you-container {
     position: absolute;
-    top: 15%; /* Align containers higher */
+    top: 10%; /* Align containers slightly higher */
     left: 50%;
     transform: translate(-50%, 0); /* Center horizontally */
     text-align: center;
@@ -28,32 +28,32 @@ body {
     background: rgba(255, 255, 255, 0.15); /* Transparent white */
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px; /* Reduced padding */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Ensures the container doesn't stretch too wide */
+    width: 90%; /* Ensures the container doesn't stretch too wide */
     max-width: 600px;
-  }
-  
-  h1, h2 {
-    font-size: 2rem;
+}
+
+h1, h2 {
+    font-size: 1.8rem; /* Reduced font size */
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
     background: linear-gradient(90deg, #ff7eb3, #ff758c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  
-  p {
-    font-size: 1rem;
-    margin-bottom: 30px;
+}
+
+p {
+    font-size: 0.9rem; /* Slightly smaller text */
+    margin-bottom: 20px; /* Reduced margin */
     color: #f8f8f8;
-  }
-  
-  /* Button Styling */
-  button {
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 1rem;
+}
+
+/* Button Styling */
+button {
+    padding: 8px 16px; /* Reduced padding */
+    margin: 3px; /* Reduced margin */
+    font-size: 0.9rem; /* Smaller font size */
     font-weight: 600;
     color: #fff;
     background: linear-gradient(45deg, #ff758c, #ff7eb3);
@@ -61,84 +61,84 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background: linear-gradient(45deg, #ff7eb3, #ff758c);
     transform: scale(1.1);
     box-shadow: 0px 8px 20px rgba(255, 121, 173, 0.3);
-  }
-  
-  /* Highlight Selected Buttons */
-  button.selected {
+}
+
+/* Highlight Selected Buttons */
+button.selected {
     background: linear-gradient(45deg, #5ec76e, #46b154);
     color: white;
     box-shadow: 0px 12px 30px rgba(50, 200, 80, 0.4);
-  }
-  
-  /* Input Textbox Styling */
-  input[type="text"] {
-    margin-top: 10px;
-    padding: 10px;
-    width: 90%;
-    font-size: 1rem;
+}
+
+/* Input Textbox Styling */
+input[type="text"] {
+    margin-top: 8px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    width: 85%; /* Smaller width */
+    font-size: 0.9rem;
     border: 2px solid #ff758c;
-    border-radius: 10px;
+    border-radius: 8px;
     outline: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  input[type="text"]:focus {
+}
+
+input[type="text"]:focus {
     border-color: #5ec76e;
-  }
-  
-  /* Textarea Styling for General Comments */
-  textarea {
-    margin-top: 10px;
-    padding: 10px;
-    width: 90%;
-    font-size: 1rem;
+}
+
+/* Textarea Styling for General Comments */
+textarea {
+    margin-top: 8px; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+    width: 85%; /* Smaller width */
+    font-size: 0.9rem;
     border: 2px solid #ff758c;
-    border-radius: 10px;
+    border-radius: 8px;
     outline: none;
     resize: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
     background: rgba(255, 255, 255, 0.8); /* Slightly opaque background for clarity */
-  }
-  
-  textarea:focus {
+}
+
+textarea:focus {
     border-color: #5ec76e;
     background: white;
-  }
-  
-  /* Submit Button */
-  #submit-btn {
+}
+
+/* Submit Button */
+#submit-btn {
     display: block;
-    margin: 20px auto;
-    padding: 10px 30px;
-    font-size: 1.2rem;
+    margin: 15px auto; /* Reduced margin */
+    padding: 8px 20px; /* Reduced padding */
+    font-size: 1rem; /* Slightly smaller font size */
     font-weight: bold;
     color: #fff;
     background: linear-gradient(45deg, #ff758c, #ff7eb3);
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  #submit-btn:hover {
+}
+
+#submit-btn:hover {
     background: linear-gradient(45deg, #ff7eb3, #ff758c);
     transform: scale(1.1);
-  }
-  
-  /* Thank You Container Styling */
-  .thank-you-container {
+}
+
+/* Thank You Container Styling */
+.thank-you-container {
     position: absolute;
-    top: 15%; /* Align with the other containers */
+    top: 10%; /* Align with the other containers */
     left: 50%;
     transform: translate(-50%, 0);
     text-align: center;
@@ -146,24 +146,50 @@ body {
     background: rgba(255, 255, 255, 0.15); /* Transparent white */
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px; /* Reduced padding */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 90%;
     max-width: 600px;
-  }
-  
-  .thank-you-container h2 {
-    font-size: 2rem;
+}
+
+.thank-you-container h2 {
+    font-size: 1.8rem; /* Reduced font size */
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
     background: linear-gradient(90deg, #ff7eb3, #ff758c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  
-  .thank-you-container p {
-    font-size: 1rem;
+}
+
+.thank-you-container p {
+    font-size: 0.9rem; /* Smaller font size */
     color: #f8f8f8;
-    margin: 10px 0;
-  }
-  
+    margin: 8px 0; /* Reduced margin */
+}
+
+/* Responsive Styling for Mobile */
+@media only screen and (max-width: 768px) {
+    .questions-container {
+        width: 95%;
+        padding: 15px; /* Reduced padding */
+    }
+
+    .question p {
+        font-size: 0.9rem; /* Smaller font size */
+        margin-bottom: 8px; /* Reduced margin */
+    }
+
+    button {
+        padding: 6px 12px; /* More compact buttons */
+        font-size: 0.8rem; /* Smaller font */
+    }
+
+    input[type="text"], textarea {
+        font-size: 0.8rem; /* Smaller font size */
+        padding: 6px; /* More compact inputs */
+    }
+
+    .question {
+        margin-bottom: 10px; /* Reduced spacing between questions */
+    }
+}
