@@ -11,6 +11,12 @@ const mealOtherInput = document.getElementById("meal-other-input");
 const giftOtherInput = document.getElementById("gift-other-input");
 const submitBtn = document.getElementById("submit-btn");
 
+// FormSubmit hidden form references
+const form = document.getElementById("valentine-form");
+const mealField = document.getElementById("meal-preference");
+const giftsField = document.getElementById("gift-preferences");
+const commentsField = document.getElementById("general-comments-field");
+
 // "Yes" button shows the questions section
 yesBtn.addEventListener("click", () => {
   mainContent.style.display = "none";
@@ -56,9 +62,11 @@ document.querySelectorAll(".multi-select").forEach((btn) => {
 });
 
 // Submit button logic
-submitBtn.addEventListener("click", async () => {
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent default form submission for custom processing
+
   // Collect responses
-  const meal = document.querySelector(".single-select.selected")?.dataset.value || null;
+  const meal = document.querySelector(".single-select.selected")?.dataset.value || "None";
   const mealOtherValue = mealOtherInput.value;
 
   const gifts = Array.from(document.querySelectorAll(".multi-select.selected")).map((b) => b.dataset.value);
@@ -66,39 +74,19 @@ submitBtn.addEventListener("click", async () => {
 
   const generalComments = document.getElementById("general-comments").value;
 
-  // Prepare the response object
-  const response = {
-    mealPreference: meal === "Other" ? mealOtherValue : meal,
-    giftPreferences: gifts.includes("Other") ? [...gifts, giftOtherValue] : gifts,
-    generalComments: generalComments,
-  };
+  // Determine final meal and gift preferences
+  const finalMeal = meal === "Other" ? mealOtherValue : meal;
+  const finalGifts = gifts.includes("Other") ? [...gifts.filter(g => g !== "Other"), giftOtherValue] : gifts;
 
-  console.log("Submitting Response:", response);
+  // Populate hidden form fields
+  mealField.value = finalMeal;
+  giftsField.value = finalGifts.join(", ");
+  commentsField.value = generalComments;
 
-  // Google Apps Script Web App URL
-  const googleScriptURL = "https://script.google.com/macros/s/AKfycbymGsq42vozpHsNOzI4c69A8GemIcGs9m8HRzAJybFaPmfmMQyaNdosoWgemUQXbNo-Ww/exec"; // Replace with your Web App URL
+  // Submit the hidden form
+  form.submit();
 
-  try {
-    // Send data to Google Sheets
-    const res = await fetch(googleScriptURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(response),
-    });
-
-    if (res.ok) {
-      console.log("Response submitted successfully!");
-      // Hide the questions section and show the thank-you message
-      questionsContent.style.display = "none";
-      thankYouContent.style.display = "block";
-    } else {
-      console.error("Error submitting response:", res.statusText);
-      alert(`There was an error submitting your response: ${res.statusText}`);
-    }
-  } catch (error) {
-    console.error("Error submitting response:", error);
-    alert("There was an error submitting your response. Please check your connection and try again.");
-  }
+  // Hide questions and show thank-you message
+  questionsContent.style.display = "none";
+  thankYouContent.style.display = "block";
 });

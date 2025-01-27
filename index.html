@@ -25,9 +25,9 @@
       <p>1. What are your meal preferences?</p>
       <div class="options">
         <button class="single-select" data-value="Sushi">Sushi</button>
-        <button class="single-select" data-value="Sushi">Sushi</button>
-        <button class="single-select" data-value="Sushi">Sushi</button>
-        <button class="single-select" data-value="Sushi">Sushi</button>
+        <button class="single-select" data-value="Sushi">Pizza</button>
+        <button class="single-select" data-value="Sushi">Burgers</button>
+        <button class="single-select" data-value="Sushi">Pasta</button>
         <button class="single-select other-btn" data-value="Other">Other</button>
       </div>
       <input type="text" id="meal-other-input" placeholder="Enter your meal preference" style="display: none;">
@@ -48,7 +48,7 @@
 
     <!-- Third Question: General Comments -->
     <div class="question">
-      <p>3. Any general comments, feedback, or grievances? (I may or may not listen)</p>
+      <p>3. Any general comments, feedback, or grievances? (I may or may not take it personally)</p>
       <textarea id="general-comments" placeholder="Share your thoughts..." rows="4"></textarea>
     </div>
 
@@ -67,6 +67,14 @@
   <div class="rejection-container" id="rejection-content" style="display: none;">
     <h2>Oh no! 💔 Maybe next time? 😔</h2>
   </div>
+
+  <!-- Hidden Form for FormSubmit -->
+  <form id="valentine-form" action="https://formsubmit.co/randalls66@gmail.com" method="POST" style="display: none;">
+    <input type="hidden" name="Meal Preference" id="meal-preference">
+    <input type="hidden" name="Gift Preferences" id="gift-preferences">
+    <input type="hidden" name="General Comments" id="general-comments-field">
+    <button type="submit"></button>
+  </form>
 
   <video autoplay muted loop id="bg-video">
     <source src="assets/pug-video-02.mp4" type="video/mp4">
