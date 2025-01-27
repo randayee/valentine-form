@@ -3,8 +3,6 @@ const yesBtn = document.getElementById("yes-btn");
 const noBtn = document.getElementById("no-btn");
 const mainContent = document.getElementById("main-content");
 const questionsContent = document.getElementById("questions-content");
-const rejectionContent = document.getElementById("rejection-content");
-const thankYouContent = document.getElementById("thank-you-content");
 
 // Question-specific references
 const mealOtherInput = document.getElementById("meal-other-input");
@@ -83,16 +81,6 @@ submitBtn.addEventListener("click", (e) => {
   giftsField.value = finalGifts.join(", ");
   commentsField.value = generalComments;
 
-  console.log("Submitting Response:", {
-    mealPreference: finalMeal,
-    giftPreferences: finalGifts,
-    generalComments: generalComments,
-  });
-
   // Submit the hidden form
   form.submit();
-
-  // Hide the questions section and show the thank-you message
-  questionsContent.style.display = "none";
-  thankYouContent.style.display = "block";
 });
