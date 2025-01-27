@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="container" id="main-content">
+    <h1>Kaye, will you be my valentine?</h1>
+    <p>From the best boyfriend, Randall S.</p>
+    <button id="yes-btn">💖 Yes 💖</button>
+    <button id="no-btn">💔 No 💔</button>
+  </div>
+
+  <!-- Questions Section (Hidden by Default) -->
+  <div class="questions-container" id="questions-content" style="display: none;">
+    <h2>Let's Plan Our Valentine’s Day!</h2>
+
+    <!-- First Question: Single Select -->
+    <div class="question">
+      <p>1. What are your meal preferences?</p>
+      <div class="options">
+        <button class="single-select" data-value="Sushi">Sushi</button>
+        <button class="single-select" data-value="Sushi">Sushi</button>
+        <button class="single-select" data-value="Sushi">Sushi</button>
+        <button class="single-select" data-value="Sushi">Sushi</button>
+        <button class="single-select other-btn" data-value="Other">Other</button>
+      </div>
+      <input type="text" id="meal-other-input" placeholder="Enter your meal preference" style="display: none;">
+    </div>
+
+    <!-- Second Question: Multi-Select -->
+    <div class="question">
+      <p>2. What are your gift preferences? (select all that apply)</p>
+      <div class="options">
+        <button class="multi-select" data-value="Figs">Figs</button>
+        <button class="multi-select" data-value="Books">Books</button>
+        <button class="multi-select" data-value="Apple Watch">Apple Watch</button>
+        <button class="multi-select" data-value="Pens/Ink">Pens/Ink</button>
+        <button class="multi-select other-btn" data-value="Other">Other</button>
+      </div>
+      <input type="text" id="gift-other-input" placeholder="Enter your gift preference" style="display: none;">
+    </div>
+
+    <!-- Third Question: General Comments -->
+    <div class="question">
+      <p>3. Any general comments, feedback, or grievances? (I may or may not listen)</p>
+      <textarea id="general-comments" placeholder="Share your thoughts..." rows="4"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="submit-btn">Submit</button>
+  </div>
+
+  <!-- Thank You Message Section -->
+  <div class="thank-you-container" id="thank-you-content" style="display: none;">
+    <h2>Thank you! 💖</h2>
+    <p>I've received your response, will begin planning our date.</p>
+    <p>Looking forward to celebrating with you!</p>
+  </div>
+
+  <!-- Rejection Message -->
+  <div class="rejection-container" id="rejection-content" style="display: none;">
+    <h2>Oh no! 💔 Maybe next time? 😔</h2>
+  </div>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/pug-video-02.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script src="script.js"></script>
+</body>
+</html>
