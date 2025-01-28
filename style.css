@@ -170,7 +170,7 @@ textarea:focus {
 /* Responsive Styling for Mobile */
 @media only screen and (max-width: 768px) {
     .questions-container {
-        width: 95%;
+        width: 90%;
         padding: 15px; /* Reduced padding */
     }
 
