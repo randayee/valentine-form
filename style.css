@@ -152,78 +152,62 @@ textarea:focus {
     margin: 8px 0;
 }
 
-/* Valentine Card Specific Styling */
+/* Valentine Card Container Styling */
+.valentine-card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.10);  /* Light transparency for video visibility */
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px 25px;                     /* Adjust padding for cleaner content area */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 85%;                             /* More space on the sides */
+    max-width: 400px;                       /* Restrict width for desktop, keeping it compact */
+}
+
+/* Text Styling */
 .valentine-card-container h1 {
-    font-size: 1.8rem;                       /* Smaller title for mobile */
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 .valentine-card-container p {
-    font-size: 0.95rem;                      /* Slightly smaller paragraph text */
-    color: rgba(255, 255, 255, 0.85);        /* Dimmed for less prominence */
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
-.valentine-card-container .italic {
-    font-style: italic;
-    color: rgba(255, 209, 220, 0.9);         /* Softer pink for emphasis */
-}
-
-.valentine-card-container strong {
-    color: rgba(255, 126, 179, 0.9);         /* Soft gradient pink for strong emphasis */
-}
-
+/* Signature Styling */
 .valentine-card-container .signature {
-    margin-top: 25px;
-    font-size: 1.1rem;
+    margin-top: 20px;
+    font-size: 1rem;
     font-weight: bold;
     color: rgba(255, 126, 179, 0.9);
     font-style: italic;
 }
 
-/* Back Button Styling */
-#back-btn {
-    margin-top: 20px;
-    padding: 8px 20px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(45deg, #ff758c, #ff7eb3);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#back-btn:hover {
-    background: linear-gradient(45deg, #ff7eb3, #ff758c);
-    transform: scale(1.05);
-}
-
 /* Responsive Styling for Mobile */
 @media only screen and (max-width: 768px) {
     .valentine-card-container {
-        width: 95%;
-        padding: 18px;                       /* More compact padding */
-        background: rgba(255, 255, 255, 0.08); /* Increase transparency for better video view */
+        width: 90%;                         /* Ensure some breathing space on mobile */
+        padding: 15px 20px;                 /* Tighter padding on smaller screens */
+        max-width: none;                    /* Let it be flexible for mobile screens */
     }
 
     h1, h2 {
-        font-size: 1.5rem;                   /* Smaller heading for mobile */
+        font-size: 1.5rem;
     }
 
     .valentine-card-container p {
-        font-size: 0.85rem;                  /* Reduce paragraph size */
-        margin-bottom: 12px;
+        font-size: 0.85rem;
+        margin-bottom: 10px;
     }
 
     .valentine-card-container .signature {
-        font-size: 1rem;
-        margin-top: 20px;
-    }
-
-    button, #back-btn {
-        padding: 6px 14px;                   /* Smaller button size */
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
