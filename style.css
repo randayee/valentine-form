@@ -153,89 +153,76 @@ textarea:focus {
 }
 
 /* Valentine Card Styling */
+.valentine-card-container {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.10);  /* Lighter transparency for better video visibility */
+    backdrop-filter: blur(5px);              /* Slight blur for readability */
+    border-radius: 15px;
+    padding: 20px;                           /* Reduced padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
 .valentine-card-container h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;                       /* Smaller title for mobile */
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background: linear-gradient(90deg, #ff7eb3, #ff758c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .valentine-card-container p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #f8f8f8;
-}
-
-.valentine-card-container .italic {
-    font-style: italic;
-    color: #ffd1dc;
-}
-
-.valentine-card-container strong {
-    color: #ff7eb3;
+    font-size: 0.85rem;                      /* Smaller text for mobile */
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.85);        /* Slightly dimmed text for a subtle look */
+    line-height: 1.4;
 }
 
 .valentine-card-container .signature {
-    margin-top: 30px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ff7eb3;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
 }
 
-/* Back Button Styling */
-#back-btn {
-    margin-top: 20px;
-    padding: 10px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(45deg, #ff758c, #ff7eb3);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#back-btn:hover {
-    background: linear-gradient(45deg, #ff7eb3, #ff758c);
-    transform: scale(1.1);
-}
-
-/* Responsive Styling for Mobile */
+/* Mobile-Specific Styling */
 @media only screen and (max-width: 768px) {
-    .questions-container, .valentine-card-container {
-        width: 90%;
-        padding: 20px;
+    .valentine-card-container {
+        width: 95%;
+        padding: 15px;                       /* Tighter padding for smaller screens */
+        background: rgba(255, 255, 255, 0.08); /* Even more transparent background on mobile */
     }
 
-    h1, h2 {
-        font-size: 1.6rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-        margin-bottom: 15px;
+    .valentine-card-container h1 {
+        font-size: 1.4rem;                   /* Smaller heading on mobile */
     }
 
     .valentine-card-container p {
-        font-size: 1rem;
-        margin-bottom: 12px;
-    }
-
-    button {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-
-    input[type="text"], textarea {
-        font-size: 0.8rem;
-        padding: 6px;
+        font-size: 0.75rem;                  /* Reduce paragraph size */
+        margin-bottom: 10px;                 /* Reduce space between paragraphs */
     }
 
     .valentine-card-container .signature {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
 }
+
+/* Background Video Adjustments */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);                /* Slightly darken the video for better text contrast */
+}
+
