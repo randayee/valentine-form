@@ -25,10 +25,10 @@ body {
     transform: translate(-50%, 0);
     text-align: center;
     color: white;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(5px);
     border-radius: 15px;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 600px;
@@ -152,77 +152,78 @@ textarea:focus {
     margin: 8px 0;
 }
 
-/* Valentine Card Styling */
-.valentine-card-container {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    color: white;
-    background: rgba(255, 255, 255, 0.10);  /* Lighter transparency for better video visibility */
-    backdrop-filter: blur(5px);              /* Slight blur for readability */
-    border-radius: 15px;
-    padding: 20px;                           /* Reduced padding */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
-}
-
+/* Valentine Card Specific Styling */
 .valentine-card-container h1 {
-    font-size: 1.6rem;                       /* Smaller title for mobile */
-    font-weight: 600;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;                       /* Smaller title for mobile */
+    margin-bottom: 15px;
 }
 
 .valentine-card-container p {
-    font-size: 0.85rem;                      /* Smaller text for mobile */
-    margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.85);        /* Slightly dimmed text for a subtle look */
+    font-size: 0.95rem;                      /* Slightly smaller paragraph text */
+    color: rgba(255, 255, 255, 0.85);        /* Dimmed for less prominence */
     line-height: 1.4;
 }
 
+.valentine-card-container .italic {
+    font-style: italic;
+    color: rgba(255, 209, 220, 0.9);         /* Softer pink for emphasis */
+}
+
+.valentine-card-container strong {
+    color: rgba(255, 126, 179, 0.9);         /* Soft gradient pink for strong emphasis */
+}
+
 .valentine-card-container .signature {
-    font-size: 0.9rem;
-    margin-top: 15px;
-    color: rgba(255, 255, 255, 0.9);
+    margin-top: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgba(255, 126, 179, 0.9);
     font-style: italic;
 }
 
-/* Mobile-Specific Styling */
+/* Back Button Styling */
+#back-btn {
+    margin-top: 20px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#back-btn:hover {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    transform: scale(1.05);
+}
+
+/* Responsive Styling for Mobile */
 @media only screen and (max-width: 768px) {
     .valentine-card-container {
         width: 95%;
-        padding: 15px;                       /* Tighter padding for smaller screens */
-        background: rgba(255, 255, 255, 0.08); /* Even more transparent background on mobile */
+        padding: 18px;                       /* More compact padding */
+        background: rgba(255, 255, 255, 0.08); /* Increase transparency for better video view */
     }
 
-    .valentine-card-container h1 {
-        font-size: 1.4rem;                   /* Smaller heading on mobile */
+    h1, h2 {
+        font-size: 1.5rem;                   /* Smaller heading for mobile */
     }
 
     .valentine-card-container p {
-        font-size: 0.75rem;                  /* Reduce paragraph size */
-        margin-bottom: 10px;                 /* Reduce space between paragraphs */
+        font-size: 0.85rem;                  /* Reduce paragraph size */
+        margin-bottom: 12px;
     }
 
     .valentine-card-container .signature {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    button, #back-btn {
+        padding: 6px 14px;                   /* Smaller button size */
         font-size: 0.8rem;
     }
 }
-
-/* Background Video Adjustments */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.6);                /* Slightly darken the video for better text contrast */
-}
-
