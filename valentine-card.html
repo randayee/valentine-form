@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Valentine Card 💌</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/pug-video-07.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Valentine Card Content -->
+  <div class="valentine-card-container">
+    <h1>Happy Valentine's Day, Kaye! 💖</h1>
+    <p>It’s been 8 years, and somehow, I still love you. A lot.</p>
+    <p>You, me, and Poppy—our little team. We've built a life that's simple but pretty amazing, and I’m grateful for every day we’ve spent together <span class="italic">(I especially enjoy the days when I stay over)</span>.</p>
+    <p>This year feels like a big one for us. More travels, finding that house we keep talking about, and turning all those late-night dreams into real-life memories. I know whatever comes our way, we’ll handle it the same way we always do—<strong>together</strong>.</p>
+    <p>Thanks for being my person, my partner, and the one who really makes me feel whole. I wouldn’t want to do life with anyone else.</p>
+    <p class="signature">Love you always,<br>Randall S.</p>
+  </div>
+
+  <script>
+    document.getElementById('back-btn').addEventListener('click', () => {
+      window.location.href = 'index.html'; // Redirect back to the main page
+    });
+  </script>
+</body>
+</html>
