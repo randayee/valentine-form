@@ -160,13 +160,13 @@ textarea:focus {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(255, 255, 255, 0.10);  /* Light transparency for video visibility */
+    background: rgba(255, 255, 255, 0.10);  /* Light transparency for better video visibility */
     backdrop-filter: blur(5px);
     border-radius: 15px;
-    padding: 20px 25px;                     /* Adjust padding for cleaner content area */
+    padding: 20px 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 85%;                             /* More space on the sides */
-    max-width: 400px;                       /* Restrict width for desktop, keeping it compact */
+    width: 75%;                             /* More space on the sides */
+    max-width: 350px;                       /* Narrower max width for desktops */
 }
 
 /* Text Styling */
@@ -193,13 +193,13 @@ textarea:focus {
 /* Responsive Styling for Mobile */
 @media only screen and (max-width: 768px) {
     .valentine-card-container {
-        width: 90%;                         /* Ensure some breathing space on mobile */
-        padding: 15px 20px;                 /* Tighter padding on smaller screens */
-        max-width: none;                    /* Let it be flexible for mobile screens */
+        width: 80%;                         /* Even narrower for mobile view */
+        padding: 15px 15px;                 /* Reduce padding for a clean look */
+        max-width: 300px;                   /* Limit max width for smaller screens */
     }
 
     h1, h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .valentine-card-container p {
